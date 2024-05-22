@@ -12,10 +12,9 @@ pipeline{
       stage('upload artifact'){
         steps{
             sh 'curl -uadmin:AP5CNW3E6mvDGwoPRSb2crkLwR2 -T \
-            target/bio*.jar \
-            ""http://ec2-52-91-127-132.compute1.amazonaws.com:8081/artifactory/geolocation/geo/bio_${BUILD_ID}.jar"'
-        }
+             target/bio*.jar "http://ec2-52-91-127-132.compute-1.amazonaws.com:8081/artifactory/geosolution/geo/bio_${BUILD_ID}.jar"'
         }
         }
         }
 
+}
