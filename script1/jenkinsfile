@@ -10,5 +10,11 @@ pipeline{
             }
             
         }
+         stage("upload artifact"){
+            steps{
+              sh 'curl -uadmin:AP5CNW3E6mvDGwoPRSb2crkLwR2 -T target/bio*.jar "http://ec2-34-202-233-128.compute-1.amazonaws.com:8081/artifactory/geo-app/_${BUILD_ID}.jar"'
+       
+    }
+}
     }
 }
